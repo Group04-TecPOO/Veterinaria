@@ -28,6 +28,15 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 	private JTextField txtTel;
 	private JTextField txtDi;
 	private JButton btnRegistrar;
+	private JLabel lblMascota;
+	private JLabel lblNombre_1;
+	private JLabel lblEdad;
+	private JLabel lblEspecie;
+	private JLabel lblRaza;
+	private JTextField txtNomM;
+	private JTextField txtEdadM;
+	private JTextField txtEspecie;
+	private JTextField txtRaza;
 
 	/**
 	 * Launch the application.
@@ -50,7 +59,7 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 	 */
 	public Gui_Veterinaria() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 647, 322);
+		setBounds(100, 100, 647, 565);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -119,8 +128,57 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 		{
 			btnRegistrar = new JButton("Registrar");
 			btnRegistrar.addActionListener(this);
-			btnRegistrar.setBounds(470, 180, 89, 23);
+			btnRegistrar.setBounds(469, 228, 93, 32);
 			contentPane.add(btnRegistrar);
+		}
+		{
+			lblMascota = new JLabel("Mascota:");
+			lblMascota.setBounds(10, 260, 46, 14);
+			contentPane.add(lblMascota);
+		}
+		{
+			lblNombre_1 = new JLabel("Nombre");
+			lblNombre_1.setBounds(49, 297, 46, 14);
+			contentPane.add(lblNombre_1);
+		}
+		{
+			lblEdad = new JLabel("Edad");
+			lblEdad.setBounds(49, 333, 46, 14);
+			contentPane.add(lblEdad);
+		}
+		{
+			lblEspecie = new JLabel("Especie");
+			lblEspecie.setBounds(49, 369, 46, 14);
+			contentPane.add(lblEspecie);
+		}
+		{
+			lblRaza = new JLabel("Raza");
+			lblRaza.setBounds(49, 409, 46, 14);
+			contentPane.add(lblRaza);
+		}
+		{
+			txtNomM = new JTextField();
+			txtNomM.setColumns(10);
+			txtNomM.setBounds(126, 294, 222, 20);
+			contentPane.add(txtNomM);
+		}
+		{
+			txtEdadM = new JTextField();
+			txtEdadM.setColumns(10);
+			txtEdadM.setBounds(126, 330, 222, 20);
+			contentPane.add(txtEdadM);
+		}
+		{
+			txtEspecie = new JTextField();
+			txtEspecie.setColumns(10);
+			txtEspecie.setBounds(126, 366, 222, 20);
+			contentPane.add(txtEspecie);
+		}
+		{
+			txtRaza = new JTextField();
+			txtRaza.setColumns(10);
+			txtRaza.setBounds(126, 406, 222, 20);
+			contentPane.add(txtRaza);
 		}
 	}
 	public void actionPerformed(ActionEvent e) {
@@ -136,6 +194,10 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 		int telefono = Integer.parseInt(txtTel.getText());
 		String direccion = txtDi.getText();
 		
+		String nombreMa = txtNomM.getText();
+		int edad = Integer.parseInt(txtEdadM.getText());
+		String especie = txtEspecie.getText();
+		String raza = txtRaza.getText();
 		
 	}
 }
