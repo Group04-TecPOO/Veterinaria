@@ -14,6 +14,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import java.awt.Color;
 
 public class Gui_Veterinaria extends JFrame implements ActionListener {
 
@@ -72,21 +73,24 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 			setJMenuBar(menuBar);
 			{
 				mnNewMenu = new JMenu("Cita");
+				mnNewMenu.setBackground(new Color(176, 196, 222));
 				menuBar.add(mnNewMenu);
 				{
 					mntmNewMenuItem = new JMenuItem("Agendar cita");
+					mntmNewMenuItem.setBackground(new Color(176, 196, 222));
 					mntmNewMenuItem.addActionListener(this);
 					mnNewMenu.add(mntmNewMenuItem);
 				}
 			}
 		}
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(230, 230, 250));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		{
-			lblNewLabel = new JLabel("Dueño:");
+			lblNewLabel = new JLabel("DUEÑO:");
 			lblNewLabel.setBounds(27, 73, 46, 14);
 			contentPane.add(lblNewLabel);
 		}
@@ -147,13 +151,14 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 		}
 		{
 			btnRegistrar = new JButton("Registrar");
+			btnRegistrar.setBackground(new Color(176, 196, 222));
 			btnRegistrar.addActionListener(this);
 			btnRegistrar.setBounds(416, 228, 146, 83);
 			contentPane.add(btnRegistrar);
 		}
 		{
-			lblMascota = new JLabel("Mascota:");
-			lblMascota.setBounds(27, 322, 46, 14);
+			lblMascota = new JLabel("MASCOTA:");
+			lblMascota.setBounds(27, 322, 99, 14);
 			contentPane.add(lblMascota);
 		}
 		{
@@ -224,6 +229,7 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 		
 	}
 	protected void do_mntmNewMenuItem_actionPerformed(ActionEvent e) {
-	
+	cita ci= new cita();
+	ci.setVisible(true);
 	}
 }
