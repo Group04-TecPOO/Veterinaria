@@ -46,7 +46,7 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 	public Gui_Veterinaria() {
 		setTitle("Menú Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 647, 565);
+		setBounds(100, 100, 629, 487);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(230, 230, 250));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -56,19 +56,19 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 		{
 			btnNewButton = new JButton("Paciente Afiliado");
 			btnNewButton.addActionListener(this);
-			btnNewButton.setBounds(30, 138, 133, 35);
+			btnNewButton.setBounds(64, 196, 133, 35);
 			contentPane.add(btnNewButton);
 		}
 		{
 			btnPacienteNuevo = new JButton("Paciente Nuevo");
 			btnPacienteNuevo.addActionListener(this);
-			btnPacienteNuevo.setBounds(453, 138, 133, 35);
+			btnPacienteNuevo.setBounds(414, 196, 133, 35);
 			contentPane.add(btnPacienteNuevo);
 		}
 		{
 			btnCita = new JButton("Cita");
 			btnCita.addActionListener(this);
-			btnCita.setBounds(231, 252, 133, 35);
+			btnCita.setBounds(241, 316, 133, 35);
 			contentPane.add(btnCita);
 		}
 	}
@@ -82,8 +82,9 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 		if (e.getSource() == btnPacienteNuevo) {
 			do_btnPacienteNuevo_actionPerformed(e);
 		}
-	//Sebastián Felipe Hermoza Quispe - Creación de botones 
 	}
+	
+	//Sebastián Felipe Hermoza Quispe - Creación de botones 
 	protected void do_btnPacienteNuevo_actionPerformed(ActionEvent e) {
 		paciente_nuevo panu = new paciente_nuevo();
 		panu.setVisible(true);
