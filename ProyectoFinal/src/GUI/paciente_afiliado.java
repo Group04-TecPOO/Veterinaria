@@ -10,11 +10,15 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import java.awt.Color;
+import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class paciente_afiliado extends JDialog {
+public class paciente_afiliado extends JDialog implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
+	public Gui_Veterinaria gv;
 
 	/**
 	 * Launch the application.
@@ -62,5 +66,7 @@ public class paciente_afiliado extends JDialog {
 		btnNewButton_2.setForeground(Color.ORANGE);
 		btnNewButton_2.setBounds(288, 133, 177, 34);
 		contentPanel.add(btnNewButton_2);
+	}
+	public void actionPerformed(ActionEvent e) {
 	}
 }
