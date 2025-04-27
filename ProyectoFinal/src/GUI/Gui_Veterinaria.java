@@ -20,31 +20,9 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JLabel lblNewLabel;
-	private JLabel lblNombre;
-	private JLabel lblApellido;
-	private JLabel lblDni;
-	private JLabel lblTelefono;
-	private JLabel lblDireccion;
-	private JTextField txtNom;
-	private JTextField txtApe;
-	private JTextField txtDni;
-	private JTextField txtTel;
-	private JTextField txtDi;
-	private JButton btnRegistrar;
-	private JLabel lblMascota;
-	private JLabel lblNombre_1;
-	private JLabel lblEdad;
-	private JLabel lblEspecie;
-	private JLabel lblRaza;
-	private JTextField txtNomM;
-	private JTextField txtEdadM;
-	private JTextField txtEspecie;
-	private JTextField txtRaza;
-	private JMenuBar menuBar;
-	private JMenu mnNewMenu;
-	private JMenuItem mntmNewMenuItem;
-	private JButton btnPruebaBorrar;
+	private JButton btnNewButton;
+	private JButton btnPacienteNuevo;
+	private JButton btnCita;
 
 	/**
 	 * Launch the application.
@@ -66,24 +44,9 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public Gui_Veterinaria() {
-		setTitle("Registro");
+		setTitle("Menú Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 647, 565);
-		{
-			menuBar = new JMenuBar();
-			setJMenuBar(menuBar);
-			{
-				mnNewMenu = new JMenu("Cita");
-				mnNewMenu.setBackground(new Color(176, 196, 222));
-				menuBar.add(mnNewMenu);
-				{
-					mntmNewMenuItem = new JMenuItem("Agendar cita");
-					mntmNewMenuItem.setBackground(new Color(176, 196, 222));
-					mntmNewMenuItem.addActionListener(this);
-					mnNewMenu.add(mntmNewMenuItem);
-				}
-			}
-		}
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(230, 230, 250));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -91,164 +54,47 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		{
-			lblNewLabel = new JLabel("DUEÑO:");
-			lblNewLabel.setBounds(27, 73, 46, 14);
-			contentPane.add(lblNewLabel);
+			btnNewButton = new JButton("Paciente Afiliado");
+			btnNewButton.addActionListener(this);
+			btnNewButton.setBounds(30, 138, 133, 35);
+			contentPane.add(btnNewButton);
 		}
 		{
-			lblNombre = new JLabel("Nombre");
-			lblNombre.setBounds(66, 114, 46, 14);
-			contentPane.add(lblNombre);
+			btnPacienteNuevo = new JButton("Paciente Nuevo");
+			btnPacienteNuevo.addActionListener(this);
+			btnPacienteNuevo.setBounds(453, 138, 133, 35);
+			contentPane.add(btnPacienteNuevo);
 		}
 		{
-			lblApellido = new JLabel("Apellido");
-			lblApellido.setBounds(66, 147, 46, 14);
-			contentPane.add(lblApellido);
+			btnCita = new JButton("Cita");
+			btnCita.addActionListener(this);
+			btnCita.setBounds(231, 252, 133, 35);
+			contentPane.add(btnCita);
 		}
-		{
-			lblDni = new JLabel("DNI");
-			lblDni.setBounds(66, 183, 46, 14);
-			contentPane.add(lblDni);
-		}
-		{
-			lblTelefono = new JLabel("Telefono");
-			lblTelefono.setBounds(66, 225, 46, 14);
-			contentPane.add(lblTelefono);
-		}
-		{
-			lblDireccion = new JLabel("Direccion");
-			lblDireccion.setBounds(66, 262, 46, 14);
-			contentPane.add(lblDireccion);
-		}
-		{
-			txtNom = new JTextField();
-			txtNom.setBounds(143, 111, 222, 20);
-			contentPane.add(txtNom);
-			txtNom.setColumns(10);
-		}
-		{
-			txtApe = new JTextField();
-			txtApe.setColumns(10);
-			txtApe.setBounds(143, 144, 222, 20);
-			contentPane.add(txtApe);
-		}
-		{
-			txtDni = new JTextField();
-			txtDni.setColumns(10);
-			txtDni.setBounds(143, 180, 222, 20);
-			contentPane.add(txtDni);
-		}
-		{
-			txtTel = new JTextField();
-			txtTel.setColumns(10);
-			txtTel.setBounds(143, 222, 222, 20);
-			contentPane.add(txtTel);
-		}
-		{
-			txtDi = new JTextField();
-			txtDi.setColumns(10);
-			txtDi.setBounds(143, 259, 222, 20);
-			contentPane.add(txtDi);
-		}
-		{
-			btnRegistrar = new JButton("Registrar");
-			btnRegistrar.setBackground(new Color(176, 196, 222));
-			btnRegistrar.addActionListener(this);
-			btnRegistrar.setBounds(416, 228, 146, 83);
-			contentPane.add(btnRegistrar);
-		}
-		{
-			lblMascota = new JLabel("MASCOTA:");
-			lblMascota.setBounds(27, 322, 99, 14);
-			contentPane.add(lblMascota);
-		}
-		{
-			lblNombre_1 = new JLabel("Nombre");
-			lblNombre_1.setBounds(66, 359, 46, 14);
-			contentPane.add(lblNombre_1);
-		}
-		{
-			lblEdad = new JLabel("Edad");
-			lblEdad.setBounds(66, 395, 46, 14);
-			contentPane.add(lblEdad);
-		}
-		{
-			lblEspecie = new JLabel("Especie");
-			lblEspecie.setBounds(66, 431, 46, 14);
-			contentPane.add(lblEspecie);
-		}
-		{
-			lblRaza = new JLabel("Raza");
-			lblRaza.setBounds(66, 471, 46, 14);
-			contentPane.add(lblRaza);
-		}
-		{
-			txtNomM = new JTextField();
-			txtNomM.setColumns(10);
-			txtNomM.setBounds(143, 356, 222, 20);
-			contentPane.add(txtNomM);
-		}
-		{
-			txtEdadM = new JTextField();
-			txtEdadM.setColumns(10);
-			txtEdadM.setBounds(143, 392, 222, 20);
-			contentPane.add(txtEdadM);
-		}
-		{
-			txtEspecie = new JTextField();
-			txtEspecie.setColumns(10);
-			txtEspecie.setBounds(143, 428, 222, 20);
-			contentPane.add(txtEspecie);
-		}
-		{
-			txtRaza = new JTextField();
-			txtRaza.setColumns(10);
-			txtRaza.setBounds(143, 468, 222, 20);
-			contentPane.add(txtRaza);
-		}
-		
-		JButton btnNewButton = new JButton("Prueba borrar");
-		btnNewButton.setBounds(429, 69, 133, 23);
-		contentPane.add(btnNewButton);
-		
-		btnPruebaBorrar = new JButton("Prueba borrar 2");
-		btnPruebaBorrar.addActionListener(this);
-		btnPruebaBorrar.setBounds(445, 143, 130, 23);
-		contentPane.add(btnPruebaBorrar);
 	}
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == btnPruebaBorrar) {
-			do_btnPruebaBorrar_actionPerformed(e);
+		if (e.getSource() == btnCita) {
+			do_btnCita_actionPerformed(e);
 		}
-		if (e.getSource() == mntmNewMenuItem) {
-			do_mntmNewMenuItem_actionPerformed(e);
+		if (e.getSource() == btnNewButton) {
+			do_btnNewButton_actionPerformed(e);
 		}
-		if (e.getSource() == btnRegistrar) {
-			do_btnRegistrar_actionPerformed(e);
+		if (e.getSource() == btnPacienteNuevo) {
+			do_btnPacienteNuevo_actionPerformed(e);
 		}
+	//Sebastián Felipe Hermoza Quispe - Creación de botones 
 	}
-	protected void do_btnRegistrar_actionPerformed(ActionEvent e) {
-		
-		String nombre = txtNom.getText();
-		String apellido = txtApe.getText();
-		int dni = Integer.parseInt(txtDni.getText());
-		int telefono = Integer.parseInt(txtTel.getText());
-		String direccion = txtDi.getText();
-		
-		String nombreMa = txtNomM.getText();
-		int edad = Integer.parseInt(txtEdadM.getText());
-		String especie = txtEspecie.getText();
-		String raza = txtRaza.getText();
+	protected void do_btnPacienteNuevo_actionPerformed(ActionEvent e) {
+		paciente_nuevo panu = new paciente_nuevo();
+		panu.setVisible(true);
+	}
+	protected void do_btnNewButton_actionPerformed(ActionEvent e) {
+		paciente_afiliado afinu = new paciente_afiliado();
+		afinu.setVisible(true);
 		
 	}
-	protected void do_mntmNewMenuItem_actionPerformed(ActionEvent e) {
-	cita ci= new cita();
-	ci.setVisible(true);
-	}
-	protected void do_btnPruebaBorrar_actionPerformed(ActionEvent e) {
-		
-		double prueba = Double.parseDouble(txtNom.getText());
-		//Borrar esto es prueba para actualizar GitHub
-		
+	protected void do_btnCita_actionPerformed(ActionEvent e) {
+		cita cinu =new cita();
+		cinu.setVisible(true);
 	}
 }

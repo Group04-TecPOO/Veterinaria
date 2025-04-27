@@ -31,6 +31,7 @@ public class cita extends JDialog {
 	 * Create the dialog.
 	 */
 	public cita() {
+		setModal(true);
 		setTitle("Cita");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
