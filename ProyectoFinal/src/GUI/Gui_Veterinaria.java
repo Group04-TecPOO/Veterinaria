@@ -44,6 +44,7 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 	private JMenuBar menuBar;
 	private JMenu mnNewMenu;
 	private JMenuItem mntmNewMenuItem;
+	private JButton btnPruebaBorrar;
 
 	/**
 	 * Launch the application.
@@ -205,8 +206,20 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 			txtRaza.setBounds(143, 468, 222, 20);
 			contentPane.add(txtRaza);
 		}
+		
+		JButton btnNewButton = new JButton("Prueba borrar");
+		btnNewButton.setBounds(429, 69, 133, 23);
+		contentPane.add(btnNewButton);
+		
+		btnPruebaBorrar = new JButton("Prueba borrar 2");
+		btnPruebaBorrar.addActionListener(this);
+		btnPruebaBorrar.setBounds(445, 143, 130, 23);
+		contentPane.add(btnPruebaBorrar);
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnPruebaBorrar) {
+			do_btnPruebaBorrar_actionPerformed(e);
+		}
 		if (e.getSource() == mntmNewMenuItem) {
 			do_mntmNewMenuItem_actionPerformed(e);
 		}
@@ -231,5 +244,11 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 	protected void do_mntmNewMenuItem_actionPerformed(ActionEvent e) {
 	cita ci= new cita();
 	ci.setVisible(true);
+	}
+	protected void do_btnPruebaBorrar_actionPerformed(ActionEvent e) {
+		
+		double prueba = Double.parseDouble(txtNom.getText());
+		//Borrar esto es prueba para actualizar GitHub
+		
 	}
 }
