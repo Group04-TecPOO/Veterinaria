@@ -116,7 +116,7 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 	}
 	
 	
-	// cambio y configuracion de botones
+	// Sebastian Hernandez cambio y configuracion de botones
 	protected void do_btnAfiliado_actionPerformed(ActionEvent e) {
 		paciente_afiliado pa =  new paciente_afiliado();
 		pa.setVisible(true);
