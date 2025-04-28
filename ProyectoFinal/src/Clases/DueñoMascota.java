@@ -5,7 +5,6 @@ public class DueñoMascota {
 	private boolean sexo;
 	private String nomM, raza, especie;
 	private int edadM, dia, mes, año;
-	private int borrar2;
 	
 	public DueñoMascota(String nomD, String ape, String direc, String dni, String tele, boolean sexo, String nomM,
 			String raza, String especie, int edadM, int dia, int mes, int año) {

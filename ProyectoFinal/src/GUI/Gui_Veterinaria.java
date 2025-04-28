@@ -130,6 +130,6 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 	protected void do_btnNewButton_actionPerformed(ActionEvent e) {
 		paciente_nuevo pn= new paciente_nuevo();
 		pn.setVisible(true);
-		this.setVisible(false);
+		
 	}
 }
