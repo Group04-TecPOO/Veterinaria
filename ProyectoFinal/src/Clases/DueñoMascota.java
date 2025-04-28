@@ -1,7 +1,7 @@
 package Clases;
 
 public class DueñoMascota {
-	private String nomD, ape, direc, dni, tele;
+	private String nomD, ape, direc, dni, tele, borrar;
 	private boolean sexo;
 	private String nomM, raza, especie;
 	private int edadM, dia, mes, año;

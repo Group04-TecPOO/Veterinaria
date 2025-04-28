@@ -14,6 +14,7 @@ import java.awt.GridLayout;
 import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
@@ -250,13 +251,25 @@ public class paciente_nuevo extends JDialog implements ActionListener {
 	 ArregloVeterinaria av = new ArregloVeterinaria();
 	// Registro de datos - Melissa Guillen Olivera
 	protected void do_btnRegistrar_actionPerformed(ActionEvent e) {
-		DueñoMascota dm1= new DueñoMascota(LeerNomD(), LeerApe(), LeerDire(), LeerDni(), LeerTele(), LeerSexo(), LeerNomM(), LeerRaza(), LeerEspe(), LeerEdad(), LeerDia(), LeerMes(), LeerAño());
+		//Carlos Garcia try catch
+		try { 
+			
+			int edad = LeerEdad(); 
+		    if (edad < 0) { 
+		        MostrarError(); 
+		        return; 
+		    }
+			DueñoMascota dm1= new DueñoMascota(LeerNomD(), LeerApe(), LeerDire(), LeerDni(), LeerTele(), LeerSexo(), LeerNomM(), LeerRaza(), LeerEspe(), LeerEdad(), LeerDia(), LeerMes(), LeerAño());
 		av.Adicionar(dm1);
-		
+		} catch (Exception e2) {
+			MostrarError();
+		}
 	}
-	void MostrarError() {
-		
+	
+	private void MostrarError() {//Se crea un metodo para que muestre un mensaje del error
+		JOptionPane.showMessageDialog(this,"Ingrese edad valida");
 	}
+	
 	String LeerNomD(){
 		return txtNomD.getText();
 	}
@@ -296,20 +309,7 @@ public class paciente_nuevo extends JDialog implements ActionListener {
 	boolean LeerSexo() {
 		return Boolean.parseBoolean(cboSexo.getActionCommand());
 	}
-	/*
-	String nomD= txtNomD.getText();
-	String ape= txtApeD.getText();
-	int edadD= Integer.parseInt(txtEdadD.getText());
-	Boolean sexo= Boolean.parseBoolean(cboSexo.getActionCommand());
-	String direc= txtDirec.getText();
-	int tel= Integer.parseInt(txtTel.getText());
 	
-	String nomMas= txtNomM.getText();
-	int edad= Integer.parseInt(txtEdadM.getText());
-	String espe= txtEspeM.getText();
-	String raza= txtRaza.getText();
-	int dia = Integer.parseInt(cboDia.getSelectedItem().toString());
-	int mes = Integer.parseInt(cboMes.getSelectedItem().toString());
-	int año = Integer.parseInt(cboAnio.getSelectedItem().toString());
-	*/
+	
+	
 }

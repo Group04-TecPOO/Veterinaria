@@ -59,11 +59,12 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 		contentPane.setLayout(null);
 		{
 			btnAfiliado = new JButton("");
+			//sebastian hernandez modificacion de imagenes y fonodo del boton
 			btnAfiliado.setOpaque(false);
 			btnAfiliado.setBorderPainted(false);
 			btnAfiliado.setContentAreaFilled(false);
 			btnAfiliado.addActionListener(this);
-			btnAfiliado.setIcon(new ImageIcon("C:\\Users\\sebas\\Desktop\\Dario-Arnaez-Genesis-3G-User-Files.96.png"));
+			btnAfiliado.setIcon(new ImageIcon("C:\\Users\\sebas\\Desktop\\cliente.png"));
 			btnAfiliado.setBounds(50, 72, 133, 134);
 			contentPane.add(btnAfiliado);
 		}
@@ -79,6 +80,7 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 		}
 		{
 			btnCIta = new JButton("New button");
+			//sebastian hernandez modificacion de imagenes y fonodo del boton
 			btnCIta.setOpaque(false);
 			btnCIta.setBorderPainted(false);
 			btnCIta.setContentAreaFilled(false);
@@ -94,6 +96,7 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 		}
 		{
 			btnNewButton = new JButton("");
+			//sebastian hernandez modificacion de imagenes y fonodo del boton
 			btnNewButton.setOpaque(false);
 			btnNewButton.setBorderPainted(false);
 			btnNewButton.setContentAreaFilled(false);
@@ -125,11 +128,9 @@ public class Gui_Veterinaria extends JFrame implements ActionListener {
 	protected void do_btnCIta_actionPerformed(ActionEvent e) {
 		cita c = new cita();
 		c.setVisible(true);
-		this.setVisible(false);
 	}
 	protected void do_btnNewButton_actionPerformed(ActionEvent e) {
 		paciente_nuevo pn= new paciente_nuevo();
 		pn.setVisible(true);
-		
 	}
 }
